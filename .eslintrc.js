@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2020: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -12,13 +12,14 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
     sourceType: 'module',
+    ecmaVersion: 2020,
   },
   plugins: [
     'react',
     '@typescript-eslint',
   ],
   rules: {
-  },
+    "react/prop-types": "off"
+  }
 };
