@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import classNames from 'classnames';
+import Modal from '../Modal/Modal';
+// import loadBurgers from '../requests';
 
-const OrderList = ({ userOrder }) => {
+const OrderList = ({ userOrder, ingredients }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const averagePrice = useMemo(() => {
@@ -25,7 +26,7 @@ const OrderList = ({ userOrder }) => {
     <>
       <div className="container order-cards">
         {userOrder.map((product) => (
-          <>
+          <React.Fragment key={product}>
             <div className="card-order-cell">
               <div className="card-image">
                 <img
@@ -52,53 +53,17 @@ const OrderList = ({ userOrder }) => {
                 Изменить
               </button>
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
 
       {selectedProduct !== null && (
-      <div className={classNames('modal', {
-        'is-active': selectedProduct.id,
-      })}
-      >
-        <div className="modal-background" />
-        <div className="modal-card">
-          <header className="modal-card-head">
-            <p className="modal-card-title">{selectedProduct.name}</p>
-            <button
-              onClick={() => chooseProduct(null)}
-              className="delete"
-              type="button"
-              aria-label="close"
-            />
-          </header>
-          <section className="modal-card-body">
-            <img src={selectedProduct.url} alt="" />
-
-            <div>
-              <ul>
-                <li>Cheese</li>
-                <li>Sauce</li>
-                <li>Tomato</li>
-                <li>Onion</li>
-                <li>cucumber</li>
-              </ul>
-            </div>
-          </section>
-          <footer className="modal-card-foot">
-            <button type="button" className="button is-success">Save changes</button>
-            <button
-              type="button"
-              className="button"
-              onClick={() => chooseProduct(null)}
-            >
-              Cancel
-            </button>
-          </footer>
-        </div>
-      </div>
+        <Modal
+          selectedProduct={selectedProduct}
+          chooseProduct={chooseProduct}
+          ingredients={ingredients}
+        />
       )}
-
       <div>
         {`Общий счет ${averagePrice} грн`}
       </div>
