@@ -1,2 +1,0 @@
-(this["webpackJsonphot-burgers-site"]=this["webpackJsonphot-burgers-site"]||[]).push([[0],{11:function(e,t,n){"use strict";n.r(t);var r=n(1),s=n.n(r),c=n(3),i=n.n(c),o=(n(8),n(9),n(0));var u=function(){return Object(o.jsx)("div",{className:"App",children:"Hello"})};i.a.render(Object(o.jsx)(s.a.StrictMode,{children:Object(o.jsx)(u,{})}),document.getElementById("root"))},8:function(e,t,n){},9:function(e,t,n){}},[[11,1,2]]]);
-//# sourceMappingURL=main.76575040.chunk.js.map
