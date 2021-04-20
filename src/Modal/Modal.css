@@ -1,0 +1,14 @@
+/* .ingridients {
+
+} */
+
+.ingridient {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingridient__control {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+}
