@@ -2,7 +2,7 @@ import React from 'react';
 import Burger from '../Burger/Burger';
 
 const BurgersList = ({ burgers, onProductAdd }) => (
-  <div className="cards">
+  <div className="main-cards">
     {burgers.length !== 0 && burgers.map((burger) => (
       <Burger
         onProductAdd={onProductAdd}

@@ -12,7 +12,6 @@ const Burger = ({ burger, onProductAdd }) => (
     <footer className="card-footer">
       <div>
         <p>{`Цена: ${burger.price} грн`}</p>
-        <p>{`количество ${burger.quantity}`}</p>
         <button
           type="button"
           className="button is-rounded is-warning"

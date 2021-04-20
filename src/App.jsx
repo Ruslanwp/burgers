@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import 'bulma/css/bulma.css';
@@ -13,7 +13,7 @@ const App = () => {
 
   console.log(userOrder);
 
-  const addItem = (item) => {
+  const addItem = useCallback((item) => {
     setUserOrder((prevState) => {
       if (prevState.length === 0) {
         return [...prevState, item];
@@ -38,7 +38,7 @@ const App = () => {
         return newItem;
       });
     });
-  };
+  }, []);
 
   const loadData = async () => {
     const data = await loadBurgers('burgers');
@@ -58,9 +58,7 @@ const App = () => {
           <BurgersList burgers={burgers} onProductAdd={addItem} />
         </Route>
         <Route path="/addings">
-          <OrderList />
-          {/* {userOrder.length !== 0 && <BurgersList burgers={userOrder} onProductAdd={addItem}
-          />} */}
+          {userOrder.length !== 0 && <OrderList userOrder={userOrder} />}
         </Route>
         <Route path="/bucket">
           <div>hello</div>
