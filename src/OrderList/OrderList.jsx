@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import Modal from '../Modal/Modal';
-// import loadBurgers from '../requests';
 
-const OrderList = ({ userOrder, ingredients }) => {
+const OrderList = ({ userOrder, ingredients, changeOrder }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
-
-  console.log(userOrder);
-  console.log(ingredients);
 
   const chooseProduct = (id) => {
     if (id === null) {
@@ -68,7 +64,11 @@ const OrderList = ({ userOrder, ingredients }) => {
                 </div>
               </div>
               <div>
-                <p>{`цена  ${product.price * product.quantity}`}</p>
+                <p>
+                  {`цена  ${product.toppings.reduce((acc, curVal) => (
+                    acc + (curVal.price * product.quantity)
+                  ), 0)}`}
+                </p>
               </div>
               <div>
                 <p>{`количество: ${product.quantity}`}</p>
@@ -92,6 +92,7 @@ const OrderList = ({ userOrder, ingredients }) => {
           chooseProduct={chooseProduct}
           addToping={addToping}
           removeTopping={removeTopping}
+          changeOrder={changeOrder}
           ingredients={ingredients}
         />
       )}

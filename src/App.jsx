@@ -20,6 +20,27 @@ const App = () => {
     setBurgers(data);
   };
 
+  const changeOrder = (product) => {
+    const changedProduct = userOrder.map((dish) => {
+      if (product.id !== dish.id) {
+        return dish;
+      }
+
+      console.log(product);
+
+      return ({
+        ...product,
+        ...product.toppings,
+      });
+    });
+
+    console.log(changedProduct);
+
+    setUserOrder(changedProduct);
+  };
+
+  console.log(burgers);
+
   useEffect(() => {
     loadData();
   }, []);
@@ -85,6 +106,7 @@ const App = () => {
           <OrderList
             userOrder={userOrder}
             ingredients={allIngredients}
+            changeOrder={changeOrder}
           />
           )}
         </Route>

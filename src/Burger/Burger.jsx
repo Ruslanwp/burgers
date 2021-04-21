@@ -11,7 +11,7 @@ const Burger = ({ burger, onProductAdd }) => (
     <h3>{burger.name}</h3>
     <footer className="card-footer">
       <div>
-        <p>{`Цена: ${burger.price} грн`}</p>
+        <p>Цена: от 59 грн</p>
         <button
           type="button"
           className="button is-rounded is-warning"

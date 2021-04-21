@@ -91,73 +91,85 @@
       "id": 1,
       "name": "cheese",
       "forType": "burger",
-      "image": "https://cdn.shopify.com/s/files/1/0028/0235/2172/products/62172-1-1540_1400x.png?v=1597205097"
+      "image": "https://cdn.shopify.com/s/files/1/0028/0235/2172/products/62172-1-1540_1400x.png?v=1597205097",
+      "price": 12
     },
     {
       "id": 2,
       "name": "onion",
       "forType": "burger",
-      "image": "https://c0.klipartz.com/pngpicture/116/55/gratis-png-dos-rodajas-de-cebolla-cebolla-roja-cebolla-roja-en-rodajas.png"
+      "image": "https://c0.klipartz.com/pngpicture/116/55/gratis-png-dos-rodajas-de-cebolla-cebolla-roja-cebolla-roja-en-rodajas.png",
+      "price": 10
     },
     {
       "id": 3,
       "name": "cucumber",
       "forType": "burger",
-      "image": "https://w7.pngwing.com/pngs/426/268/png-transparent-slicedgreen-cucumber-illustration-cucumber-diet-food-melon-superfood-sliced-cucamber-food-gourd-fruit-thumbnail.png"
+      "image": "https://w7.pngwing.com/pngs/426/268/png-transparent-slicedgreen-cucumber-illustration-cucumber-diet-food-melon-superfood-sliced-cucamber-food-gourd-fruit-thumbnail.png",
+      "price": 7
     },
     {
       "id": 4,
       "name": "ketchup",
       "forType": "burger",
-      "image": "https://w7.pngwing.com/pngs/126/450/png-transparent-cup-of-ketchup-illustration-french-fries-ketchup-sushi-sauce-mcdonald-s-sushi-food-tomato-sauces-thumbnail.png"
+      "image": "https://w7.pngwing.com/pngs/126/450/png-transparent-cup-of-ketchup-illustration-french-fries-ketchup-sushi-sauce-mcdonald-s-sushi-food-tomato-sauces-thumbnail.png",
+      "price": 4
     },
     {
       "id": 5,
       "name": "mustard",
       "forType": "burger",
-      "image": "https://brovaryfood.com.ua/files/products/hero.mustard.500x500.png"
+      "image": "https://brovaryfood.com.ua/files/products/hero.mustard.500x500.png",
+      "price": 4
     },
     {
       "id": 6,
       "name": "salad",
       "forType": "burger",
-      "image": "https://png.pngtree.com/png-vector/20200916/ourmid/pngtree-irregular-lettuce-leaves-png-image_2344548.jpg"
+      "image": "https://png.pngtree.com/png-vector/20200916/ourmid/pngtree-irregular-lettuce-leaves-png-image_2344548.jpg",
+      "price": 6
     },
     {
       "id": 7,
       "name": "bacon",
       "forType": "burger",
-      "image": "https://w7.pngwing.com/pngs/821/54/png-transparent-three-cooked-bacons-bacon-hamburger-steak-bacon-food-recipe-steak.png"
+      "image": "https://w7.pngwing.com/pngs/821/54/png-transparent-three-cooked-bacons-bacon-hamburger-steak-bacon-food-recipe-steak.png",
+      "price": 15
     },
     {
       "id": 8,
       "name": "bun",
       "forType": "burger",
-      "image": "https://w7.pngwing.com/pngs/754/115/png-transparent-bun-pandesal-small-bread-fast-food-bun-baked-goods-food-bread.png"
+      "image": "https://w7.pngwing.com/pngs/754/115/png-transparent-bun-pandesal-small-bread-fast-food-bun-baked-goods-food-bread.png",
+      "price": 8
     },
     {
       "id": 9,
       "name": "cutlet",
       "forType": "burger",
-      "image": "https://pngimg.com/uploads/cutlet/cutlet_PNG16.png"
+      "image": "https://pngimg.com/uploads/cutlet/cutlet_PNG16.png",
+      "price": 30
     },
     {
       "id": 10,
       "name": "tomato",
       "forType": "burger",
-      "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png"
+      "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png",
+      "price": 8
     },
     {
       "id": 11,
       "name": "water",
       "forType": "burger",
-      "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png"
+      "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png",
+      "price": 6
     },
     {
       "id": 12,
       "name": "tea bag",
       "forType": "burger",
-      "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png"
+      "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png",
+      "price": 10
     }
   ]
 }
