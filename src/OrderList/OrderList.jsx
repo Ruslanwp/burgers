@@ -1,15 +1,12 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import Modal from '../Modal/Modal';
 // import loadBurgers from '../requests';
 
 const OrderList = ({ userOrder, ingredients }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const averagePrice = useMemo(() => {
-    const sum = userOrder.reduce((acc, curValue) => acc + curValue.price * curValue.quantity, 0);
-
-    return sum;
-  }, [userOrder]);
+  console.log(userOrder);
+  console.log(ingredients);
 
   const chooseProduct = (id) => {
     if (id === null) {
@@ -22,11 +19,43 @@ const OrderList = ({ userOrder, ingredients }) => {
     setSelectedProduct(foundedProduct);
   };
 
+  const addToping = (product, ingredient) => {
+    setSelectedProduct({
+      ...product,
+      toppings: product.toppings.map((topping) => {
+        if (topping.id === ingredient.id) {
+          return ({
+            ...topping,
+            quantity: topping.quantity + 1,
+          });
+        }
+
+        return topping;
+      }),
+    });
+  };
+
+  const removeTopping = (product, ingredient) => {
+    setSelectedProduct({
+      ...product,
+      toppings: product.toppings.map((topping) => {
+        if (topping.id === ingredient.id && topping.quantity !== 0) {
+          return ({
+            ...topping,
+            quantity: topping.quantity - 1,
+          });
+        }
+
+        return topping;
+      }),
+    });
+  };
+
   return (
     <>
       <div className="container order-cards">
         {userOrder.map((product) => (
-          <React.Fragment key={product}>
+          <React.Fragment key={product.id}>
             <div className="card-order-cell">
               <div className="card-image">
                 <img
@@ -61,11 +90,13 @@ const OrderList = ({ userOrder, ingredients }) => {
         <Modal
           selectedProduct={selectedProduct}
           chooseProduct={chooseProduct}
+          addToping={addToping}
+          removeTopping={removeTopping}
           ingredients={ingredients}
         />
       )}
       <div>
-        {`Общий счет ${averagePrice} грн`}
+        {/* {`Общий счет ${averagePrice} грн`} */}
       </div>
 
       <button className="button is-success" type="button">Подтвердить</button>
