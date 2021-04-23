@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 
 const OrderList = ({ userOrder, ingredients, changeOrder }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const finalPrice = userOrder.map((product) => product.toppings.reduce((acc, curVal) => (
+    acc + (curVal.price * curVal.quantity) * product.quantity
+  ), 0)).reduce((acc, curVal) => acc + curVal, 0);
 
   const chooseProduct = (id) => {
     if (id === null) {
@@ -66,7 +72,7 @@ const OrderList = ({ userOrder, ingredients, changeOrder }) => {
               <div>
                 <p>
                   {`цена  ${product.toppings.reduce((acc, curVal) => (
-                    acc + (curVal.price * product.quantity)
+                    acc + (curVal.price * curVal.quantity) * product.quantity
                   ), 0)}`}
                 </p>
               </div>
@@ -96,11 +102,16 @@ const OrderList = ({ userOrder, ingredients, changeOrder }) => {
           ingredients={ingredients}
         />
       )}
-      <div>
-        {/* {`Общий счет ${averagePrice} грн`} */}
+      <div className="py-5">
+        {`Общий счет ${finalPrice} грн`}
       </div>
-
-      <button className="button is-success" type="button">Подтвердить</button>
+      <Link
+        to="/bucket"
+        className="button is-success"
+        type="button"
+      >
+        Подтвердить
+      </Link>
     </>
   );
 };
