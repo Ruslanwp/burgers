@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 import React, {
   useCallback,
   useMemo,
@@ -8,29 +10,32 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import 'bulma/css/bulma.css';
 import Navigation from './Navigation/Navigation';
-import BurgersList from './BurgersList/BurgersList';
+import ProductList from './ProductList/ProductList';
 import Bucket from './Bucket/Bucket';
 import EmptyBucket from './EmptyBucket/EmptyBucket';
 import OrderList from './OrderList/OrderList';
-import { loadBurgers, loadIngredients } from './requests';
+import { loadProducts, loadIngredients } from './requests';
+import { Topping, Product, ToppingPair } from './types';
 
 const App = () => {
-  const [burgers, setBurgers] = useState([]);
-  const [userOrder, setUserOrder] = useState([]);
-  const [allIngredients, setIngredients] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [userOrder, setUserOrder] = useState<Product[]>([]);
+  const [allIngredients, setIngredients] = useState<Topping[]>([]);
   const [filterType, setFilterType] = useState('all');
 
   const loadData = async () => {
-    const data = await loadBurgers('products');
-    const ingredientsFromServer = await loadIngredients('ingredients');
+    const [data, ingredientsFromServer] = await Promise.all([
+      loadProducts('products'),
+      loadIngredients('ingredients'),
+    ]);
 
     setIngredients(ingredientsFromServer);
 
-    const dataWithIngredients = data.map((product) => ({
+    const dataWithIngredients = data.map((product: Product) => ({
       ...product,
       quantity: 1,
       toppings: product.ingredients
-        .reduce((acc, id) => {
+        .reduce<ToppingPair[]>((acc, id) => {
           const currentToping = acc.find((toping) => toping.id === id);
 
           if (currentToping) {
@@ -46,25 +51,25 @@ const App = () => {
         }, [])
         .map((topping) => ({
           quantity: topping.quantity,
-          ...ingredientsFromServer.find((dish) => dish.id === topping.id),
+          ...ingredientsFromServer.find((dish: Product) => dish.id === topping.id),
         })),
     }));
 
-    setBurgers(dataWithIngredients);
+    setProducts(dataWithIngredients);
   };
 
   const filteredProducts = useMemo(() => {
     if (filterType === 'all') {
-      return burgers;
+      return products;
     }
 
-    const products = burgers.filter((burger) => burger.type === filterType);
+    const recievedProducts = products.filter((burger: Product) => burger.type === filterType);
 
-    return products;
-  }, [filterType, burgers]);
+    return recievedProducts;
+  }, [filterType, products]);
 
-  const changeOrder = (product) => {
-    const changedProduct = userOrder.map((dish) => {
+  const changeOrder = useCallback((product: Product) => {
+    const changedProduct: Product[] = userOrder.map((dish) => {
       if (product.id !== dish.id) {
         return dish;
       }
@@ -76,14 +81,14 @@ const App = () => {
     });
 
     setUserOrder(changedProduct);
-  };
+  }, [userOrder]);
 
   useEffect(() => {
     loadData();
   }, []);
 
-  const addItem = useCallback((item) => {
-    setUserOrder((prevState) => {
+  const addItem = useCallback((item: Product) => {
+    setUserOrder((prevState: Product[]) => {
       if (prevState.length === 0) {
         return [...prevState, {
           ...item,
@@ -92,7 +97,7 @@ const App = () => {
         }];
       }
 
-      const isProductExist = prevState.some((product) => product.id === item.id);
+      const isProductExist: boolean = prevState.some((product) => product.id === item.id);
 
       if (!isProductExist) {
         return [...prevState, {
@@ -146,19 +151,19 @@ const App = () => {
     }));
   }, [userOrder]);
 
-  const deleteProduct = (selectedProduct) => {
+  const deleteProduct = useCallback((selectedProduct: Product) => {
     setUserOrder((state) => state.filter((product) => product.id !== selectedProduct.id));
-  };
+  }, []);
 
   return (
     <div className="container">
       <Navigation />
       <Switch>
         <Route path="/" exact>
-          <BurgersList
+          <ProductList
             filterType={filterType}
             filterHandler={setFilterType}
-            burgers={filteredProducts}
+            products={filteredProducts}
             onProductAdd={addItem}
           />
         </Route>
@@ -166,9 +171,8 @@ const App = () => {
           {userOrder.length !== 0 && (
           <OrderList
             userOrder={userOrder}
-            ingredients={allIngredients}
-            changeOrder={changeOrder}
-            onOrderReset={setUserOrder}
+            onOrderChange={changeOrder}
+            onDelete={deleteProduct}
           />
           )}
         </Route>

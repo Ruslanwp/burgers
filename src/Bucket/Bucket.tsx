@@ -1,8 +1,20 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Bucket.css';
+import { Product } from '../types';
 
-const Bucket = ({
+interface Props {
+  userOrder: Product[],
+  onDecreaseQuantity: (product: Product) => void,
+  onIncreaseQuantity: (product: Product) => void,
+  onDelete: (product: Product) => void,
+  onReset: (burgers: []) => void,
+}
+
+const Bucket: React.FC<Props> = ({
   userOrder,
   onDecreaseQuantity,
   onIncreaseQuantity,
@@ -12,7 +24,7 @@ const Bucket = ({
   <>
     <ul>
       {userOrder.map((product) => (
-        <li className="columns products has-background-light">
+        <li key={product.id} className="columns products has-background-light">
           <div className="column product is-size-4">{product.name}</div>
           <div className="column product is-size-5">{`Количество ${product.quantity}`}</div>
           <div className="column product is-size-5">

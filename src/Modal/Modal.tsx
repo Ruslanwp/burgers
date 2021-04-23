@@ -1,14 +1,28 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import './Modal.css';
 import classNames from 'classnames';
+// eslint-disable-next-line import/extensions
+import { Product, Topping } from '../types';
 
-const Modal = (
+interface Props {
+  selectedProduct: any,
+  chooseProduct: (product: any) => void,
+  addToping: (product: Product, ingredient: Topping) => void,
+  removeTopping: (product: Product, ingredient: Topping) => void,
+  onOrderChange: (product: Product) => void,
+  onDelete: (product: Product) => void,
+}
+
+const Modal: React.FC<Props> = (
   {
     selectedProduct,
     chooseProduct,
     addToping,
     removeTopping,
-    changeOrder,
+    onOrderChange,
+    onDelete,
   },
 ) => (
   <div className={classNames('modal', {
@@ -32,8 +46,8 @@ const Modal = (
         <div>
           <div className="ingridients">
             {selectedProduct.toppings && selectedProduct.toppings
-              .map((ingredient) => (
-                <div key={ingredient.key} className="ingridient">
+              .map((ingredient: any) => (
+                <div key={ingredient.id} className="ingridient">
                   <span className="ingridient__text">{ingredient.name}</span>
                   <span>
                     {ingredient.quantity === 0 ? 'не выбрано' : `количество ${ingredient.quantity}`}
@@ -61,7 +75,7 @@ const Modal = (
                 </div>
               ))}
             <div className="is-size-3">
-              {selectedProduct.toppings.reduce((acc, curVal) => (
+              {selectedProduct.toppings.reduce((acc: number, curVal: Topping) => (
                 acc + (curVal.quantity * curVal.price)
               ), 0)}
               {' грн'}
@@ -74,7 +88,13 @@ const Modal = (
           type="button"
           className="button is-success"
           onClick={() => {
-            changeOrder(selectedProduct);
+            if (selectedProduct.toppings.every((topping: Topping) => topping.quantity === 0)) {
+              onDelete(selectedProduct);
+              chooseProduct(null);
+              return;
+            }
+
+            onOrderChange(selectedProduct);
             chooseProduct(null);
           }}
         >

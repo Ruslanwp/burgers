@@ -26,28 +26,28 @@
       "name": "Texas burger",
       "url": "https://posteat.ua/wp-content/uploads/2016/04/%D0%91%D1%83%D1%80%D0%B3%D0%B5%D1%80%D1%8B-%D1%81-%D0%BA%D0%BE%D0%BB%D0%B1%D0%B0%D1%81%D0%BE%D0%B9-1.jpg",
       "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 21]
     },
     {
       "id": 5,
       "name": "Black Burger",
       "url": "https://prospekt.media/wp-content/uploads/2017/02/burger-king-halloween-black-burger.jpg",
       "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      "ingredients": [1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9, 10, 10]
     },
     {
       "id": 6,
       "name": "Big Mac",
       "url": "https://mcdonalds.ru/resize/-x1020/upload/iblock/937/0000_BigMac_Double_BB_1500x1500_min.png",
       "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10]
     },
     {
       "id": 7,
       "name": "Big Tasty",
       "url": "https://i2-prod.hertfordshiremercury.co.uk/incoming/article5213236.ece/ALTERNATES/s615/0_image012.jpg",
       "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      "ingredients": [1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9, 9, 9, 10]
     },
     {
       "id": 8,
@@ -58,199 +58,66 @@
     },
     {
       "id": 9,
-      "name": "Burger Sam",
-      "url": "https://gremio-grill.com.ua/wp-content/uploads/2020/12/Big-Gream-burger.png.pagespeed.ce.QAOzmG03Mt.png",
+      "name": "Chief burger",
+      "url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
       "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 10,
-      "name": "Burger Sam",
-      "url": "https://gremio-grill.com.ua/wp-content/uploads/2020/12/Big-Gream-burger.png.pagespeed.ce.QAOzmG03Mt.png",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      "ingredients": [1, 1, 1, 2, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10]
     },
     {
       "id": 11,
-      "name": "Burger Sam",
-      "url": "https://gremio-grill.com.ua/wp-content/uploads/2020/12/Big-Gream-burger.png.pagespeed.ce.QAOzmG03Mt.png",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 12,
       "name": "Tea",
       "url": "https://ukraine.mcdonalds.ua/img.php?src=https://ukraine.mcdonalds.ua/media/image/tea_%D1%81ut.png&w=350&h=0&zc=0",
       "type": "drink",
       "ingredients": [11, 12]
     },
     {
+      "id": 12,
+      "name": "Coca Cola",
+      "url": "https://hamaya.com.ua/wp-content/uploads/2019/11/Coca-Cola-0.5.png",
+      "type": "beverage",
+      "ingredients": [13, 14]
+    },
+    {
       "id": 13,
-      "name": "Burger Jack",
-      "url": "https://media.istockphoto.com/photos/fresh-burger-isolated-picture-id1125149183?k=6&m=1125149183&s=612x612&w=0&h=KxSfVUk3KP3BgHVYboyL9aRLHp-fRYrfPcFea0w68Ow=",
-      "type": "burger",
-      "ingredients": [1, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 14,
-      "name": "Burger Sam",
-      "url": "https://gremio-grill.com.ua/wp-content/uploads/2020/12/Big-Gream-burger.png.pagespeed.ce.QAOzmG03Mt.png",
-      "type": "burger",
-      "ingredients": [1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 15,
-      "name": "Splash burger",
-      "url": "https://smactus.top/image/cache/catalog/categories/burgery-smactus-500x500.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 16,
-      "name": "Texas burger",
-      "url": "https://posteat.ua/wp-content/uploads/2016/04/%D0%91%D1%83%D1%80%D0%B3%D0%B5%D1%80%D1%8B-%D1%81-%D0%BA%D0%BE%D0%BB%D0%B1%D0%B0%D1%81%D0%BE%D0%B9-1.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 17,
-      "name": "Black Burger",
-      "url": "https://prospekt.media/wp-content/uploads/2017/02/burger-king-halloween-black-burger.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 18,
-      "name": "Big Mac",
-      "url": "https://mcdonalds.ru/resize/-x1020/upload/iblock/937/0000_BigMac_Double_BB_1500x1500_min.png",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 19,
-      "name": "Burger Jack",
-      "url": "https://media.istockphoto.com/photos/fresh-burger-isolated-picture-id1125149183?k=6&m=1125149183&s=612x612&w=0&h=KxSfVUk3KP3BgHVYboyL9aRLHp-fRYrfPcFea0w68Ow=",
-      "type": "burger",
-      "ingredients": [1, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 20,
-      "name": "Burger Sam",
-      "url": "https://gremio-grill.com.ua/wp-content/uploads/2020/12/Big-Gream-burger.png.pagespeed.ce.QAOzmG03Mt.png",
-      "type": "burger",
-      "ingredients": [1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 22,
-      "name": "Splash burger",
-      "url": "https://smactus.top/image/cache/catalog/categories/burgery-smactus-500x500.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 23,
-      "name": "Texas burger",
-      "url": "https://posteat.ua/wp-content/uploads/2016/04/%D0%91%D1%83%D1%80%D0%B3%D0%B5%D1%80%D1%8B-%D1%81-%D0%BA%D0%BE%D0%BB%D0%B1%D0%B0%D1%81%D0%BE%D0%B9-1.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 24,
-      "name": "Black Burger",
-      "url": "https://prospekt.media/wp-content/uploads/2017/02/burger-king-halloween-black-burger.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 25,
-      "name": "Big Mac",
-      "url": "https://mcdonalds.ru/resize/-x1020/upload/iblock/937/0000_BigMac_Double_BB_1500x1500_min.png",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 26,
-      "name": "Burger Jack",
-      "url": "https://media.istockphoto.com/photos/fresh-burger-isolated-picture-id1125149183?k=6&m=1125149183&s=612x612&w=0&h=KxSfVUk3KP3BgHVYboyL9aRLHp-fRYrfPcFea0w68Ow=",
-      "type": "burger",
-      "ingredients": [1, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 27,
-      "name": "Burger Sam",
-      "url": "https://gremio-grill.com.ua/wp-content/uploads/2020/12/Big-Gream-burger.png.pagespeed.ce.QAOzmG03Mt.png",
-      "type": "burger",
-      "ingredients": [1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 28,
-      "name": "Splash burger",
-      "url": "https://smactus.top/image/cache/catalog/categories/burgery-smactus-500x500.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 29,
-      "name": "Texas burger",
-      "url": "https://posteat.ua/wp-content/uploads/2016/04/%D0%91%D1%83%D1%80%D0%B3%D0%B5%D1%80%D1%8B-%D1%81-%D0%BA%D0%BE%D0%BB%D0%B1%D0%B0%D1%81%D0%BE%D0%B9-1.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 30,
-      "name": "Black Burger",
-      "url": "https://prospekt.media/wp-content/uploads/2017/02/burger-king-halloween-black-burger.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 31,
-      "name": "Big Mac",
-      "url": "https://mcdonalds.ru/resize/-x1020/upload/iblock/937/0000_BigMac_Double_BB_1500x1500_min.png",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 32,
-      "name": "Burger Jack",
-      "url": "https://media.istockphoto.com/photos/fresh-burger-isolated-picture-id1125149183?k=6&m=1125149183&s=612x612&w=0&h=KxSfVUk3KP3BgHVYboyL9aRLHp-fRYrfPcFea0w68Ow=",
-      "type": "burger",
-      "ingredients": [1, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 33,
-      "name": "Burger Sam",
-      "url": "https://gremio-grill.com.ua/wp-content/uploads/2020/12/Big-Gream-burger.png.pagespeed.ce.QAOzmG03Mt.png",
-      "type": "burger",
-      "ingredients": [1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 34,
-      "name": "Splash burger",
-      "url": "https://smactus.top/image/cache/catalog/categories/burgery-smactus-500x500.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 35,
-      "name": "Texas burger",
-      "url": "https://posteat.ua/wp-content/uploads/2016/04/%D0%91%D1%83%D1%80%D0%B3%D0%B5%D1%80%D1%8B-%D1%81-%D0%BA%D0%BE%D0%BB%D0%B1%D0%B0%D1%81%D0%BE%D0%B9-1.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 36,
-      "name": "Black Burger",
-      "url": "https://prospekt.media/wp-content/uploads/2017/02/burger-king-halloween-black-burger.jpg",
-      "type": "burger",
-      "ingredients": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    },
-    {
-      "id": 37,
       "name": "Mac Fluri",
       "url": "http://i.otzovik.com/objects/b/310000/304220.png",
       "type": "dessert",
-      "ingredients": [13]
+      "ingredients": [20]
+    },
+    {
+      "id": 14,
+      "name": "Premier chicken salad",
+      "url": "https://ukraine.mcdonalds.ua/img.php?src=https://ukraine.mcdonalds.ua/media/image/350x305_SaladChikenPremier.png&w=350&h=0&zc=0",
+      "type": "salad",
+      "ingredients": [3, 6, 10, 19]
+    },
+    {
+      "id": 15,
+      "name": "Strawberry Milkshake",
+      "url": "https://www.seekpng.com/png/detail/58-588826_milkshake-png-hd-quality-coctel-batido-de-frutas.png",
+      "type": "beverage",
+      "ingredients": [18]
+    },
+    {
+      "id": 16,
+      "name": "Chocolate Milkshake",
+      "url": "https://kefalosfood.com/wp-content/uploads/2020/08/Chocolate-Milkshake.jpg",
+      "type": "beverage",
+      "ingredients": [17]
+    },
+    {
+      "id": 17,
+      "name": "Sprite",
+      "url": "https://pngimg.com/uploads/sprite/sprite_PNG98773.png",
+      "type": "beverage",
+      "ingredients": [16]
+    },
+    {
+      "id": 18,
+      "name": "Fanta",
+      "url": "https://pngimg.com/uploads/fanta/fanta_PNG17.png",
+      "type": "beverage",
+      "ingredients": [15]
     }
   ],
 
@@ -258,93 +125,128 @@
     {
       "id": 1,
       "name": "cheese",
-      "forType": "burger",
       "image": "https://cdn.shopify.com/s/files/1/0028/0235/2172/products/62172-1-1540_1400x.png?v=1597205097",
       "price": 12
     },
     {
       "id": 2,
       "name": "onion",
-      "forType": "burger",
-      "image": "thttps://www.vhv.rs/dpng/d/415-4150068_onion-sliced-transparent-png-png-download-transparent-background.png",
+      "image": "https://lh3.googleusercontent.com/proxy/vruUp8e5oVWN2GVj6WY4ZJ4FypMgkPByRtrj8476MuL29BbtjVoscfi4QhMS1ecBMLfgvmvKkTfX_sgDKVqXipMQUzC5H8GD40QfPvvnHBjdyxlTFTg4AwIkyXc",
       "price": 10
     },
     {
       "id": 3,
       "name": "cucumber",
-      "forType": "burger",
-      "image": "https://w7.pngwing.com/pngs/426/268/png-transparent-slicedgreen-cucumber-illustration-cucumber-diet-food-melon-superfood-sliced-cucamber-food-gourd-fruit-thumbnail.png",
+      "image": "https://image.freepik.com/free-photo/sliced-cucumber_144627-21632.jpg",
       "price": 7
     },
     {
       "id": 4,
       "name": "ketchup",
-      "forType": "burger",
-      "image": "https://w7.pngwing.com/pngs/126/450/png-transparent-cup-of-ketchup-illustration-french-fries-ketchup-sushi-sauce-mcdonald-s-sushi-food-tomato-sauces-thumbnail.png",
+      "image": "https://pngimg.com/uploads/ketchup/ketchup_PNG52.png",
       "price": 4
     },
     {
       "id": 5,
       "name": "mustard",
-      "forType": "burger",
       "image": "https://brovaryfood.com.ua/files/products/hero.mustard.500x500.png",
       "price": 4
     },
     {
       "id": 6,
       "name": "salad",
-      "forType": "burger",
-      "image": "https://png.pngtree.com/png-vector/20200916/ourmid/pngtree-irregular-lettuce-leaves-png-image_2344548.jpg",
+      "image": "https://freepngimg.com/thumb/salad/3-salad-png-image-thumb.png",
       "price": 6
     },
     {
       "id": 7,
       "name": "bacon",
-      "forType": "burger",
-      "image": "https://w7.pngwing.com/pngs/821/54/png-transparent-three-cooked-bacons-bacon-hamburger-steak-bacon-food-recipe-steak.png",
+      "image": "https://lh3.googleusercontent.com/proxy/BF2FwNXdAV_2-7xgc_K01A_2osckbbQTNp0q1igWIDIw7vuLG0f7pEtNCG1BJ543pIwjqfwHz6uwKFu_3jVCzQjZJAJ5c6pywSXS-rZXIMQuFWWRXNnHJMTHl18GWRjulg",
       "price": 15
     },
     {
       "id": 8,
       "name": "bun",
-      "forType": "burger",
-      "image": "https://www.pngfind.com/pngs/m/121-1211095_burger-bun-png-top-of-a-burger-bun.png",
+      "image": "https://pngimg.com/uploads/bun/bun_PNG13763.png",
       "price": 8
     },
     {
       "id": 9,
       "name": "cutlet",
-      "forType": "burger",
-      "image": "https://pngimg.com/uploads/cutlet/cutlet_PNG16.png",
+      "image": "https://i.pinimg.com/originals/c8/e1/59/c8e1596f260945764149800781248bcc.png",
       "price": 30
     },
     {
       "id": 10,
       "name": "tomato",
-      "forType": "burger",
-      "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png",
+      "image": "https://cdn.pixabay.com/photo/2020/06/26/18/32/tomatoes-5343599_1280.png",
       "price": 8
     },
     {
       "id": 11,
       "name": "water",
-      "forType": "burger",
       "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png",
       "price": 6
     },
     {
       "id": 12,
       "name": "tea bag",
-      "forType": "burger",
       "image": "https://c0.klipartz.com/pngpicture/133/328/gratis-png-dos-rodajas-de-tomate-pizza-herencia-tomate-tomate-frito-pan-tostado-panecillo-ingles-hamburguesa-y-sandwich-thumbnail.png",
       "price": 10
     },
     {
       "id": 13,
-      "name": "tea bag",
-      "forType": "burger",
-      "image": "https://menuprosto.ru/assets/Images/Recipe/RCP_10941.jpg",
-      "price": 30
+      "name": "cola",
+      "image": "https://img1.pnghut.com/23/15/20/e2yp7YrwyG/cola-liquid-nonalcoholic-beverage-soft-drink-plant.jpg",
+      "price": 18
+    },
+    {
+      "id": 14,
+      "name": "ice",
+      "image": "https://e7.pngegg.com/pngimages/223/378/png-clipart-three-ice-cubes-three-ice-cubes-ice.png",
+      "price": 3
+    },
+    {
+      "id": 15,
+      "name": "Fanta",
+      "image": "https://pngimg.com/uploads/fanta/fanta_PNG17.png",
+      "price": 18
+    },
+    {
+      "id": 16,
+      "name": "Sprite",
+      "image": "https://pngimg.com/uploads/sprite/sprite_PNG98773.png",
+      "price": 18
+    },
+    {
+      "id": 17,
+      "name": "Chocolate milkshake",
+      "image": "lhttps://kefalosfood.com/wp-content/uploads/2020/08/Chocolate-Milkshake.jpg",
+      "price": 36
+    },
+    {
+      "id": 18,
+      "name": "Strawberry milkshake",
+      "image": "https://www.seekpng.com/png/detail/58-588826_milkshake-png-hd-quality-coctel-batido-de-frutas.png",
+      "price": 36
+    },
+    {
+      "id": 19,
+      "name": "nuggets",
+      "image": "https://cpng.pikpng.com/pngl/s/14-140083_battered-chicken-nuggets-mc-donalds-chicken-mc-nuggets.png",
+      "price": 45
+    },
+    {
+      "id": 20,
+      "name": "ice cream",
+      "image": "https://png.pngitem.com/pimgs/s/231-2311248_bowl-vanilla-ice-cream-png-transparent-png.png",
+      "price": 45
+    },
+    {
+      "id": 21,
+      "name": "fried egg",
+      "image": "https://i.pinimg.com/originals/c1/8a/8e/c18a8e6298ce417e595b4ddec7bc486b.png",
+      "price": 20
     }
   ]
 }

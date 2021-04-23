@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Navigation = () => (
+const Navigation: React.FC = () => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="navbar-brand">
-      <a className="navbar-item" href="https://bulma.io" alt="rrr">
-        <img src="https://c0.klipartz.com/pngpicture/739/1004/gratis-png-hamburguesa-hamburguesa-rey-comida-rapida-restaurante-kfc-logotipo-de-hamburguesa-rey.png" height="80px" width="80px" alt="3" />
+      <a className="navbar-item" href="https://bulma.io">
+        <img src="https://e7.pngegg.com/pngimages/380/965/png-clipart-mcdonald-s-golden-arches-logo-mcdonalds-thumbnail.png" height="80px" width="80px" alt="3" />
       </a>
-
       <a href="/" role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true" />
         <span aria-hidden="true" />

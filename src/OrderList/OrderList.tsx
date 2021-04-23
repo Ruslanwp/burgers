@@ -1,30 +1,42 @@
+/* eslint-disable import/extensions */
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-unresolved */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { Redirect } from 'react-router-dom';
 import Modal from '../Modal/Modal';
+// eslint-disable-next-line import/extensions
+import { Product, Topping } from '../types';
 
-const OrderList = ({ userOrder, ingredients, changeOrder }) => {
+interface Props {
+  userOrder: Product[],
+  onOrderChange: (product: Product) => void,
+  onDelete: (product: Product) => void,
+}
+
+const OrderList: React.FC<Props> = ({ userOrder, onOrderChange, onDelete }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const finalPrice = userOrder.map((product) => product.toppings.reduce((acc, curVal) => (
     acc + (curVal.price * curVal.quantity) * product.quantity
   ), 0)).reduce((acc, curVal) => acc + curVal, 0);
 
-  const chooseProduct = (id) => {
-    if (id === null) {
+  const chooseProduct = (product: Product | null) => {
+    if (product === null) {
       setSelectedProduct(null);
       return;
     }
 
-    const foundedProduct = userOrder.find((order) => order.id === id);
+    const foundedProduct: any = userOrder.find((order) => order.id === product.id);
 
-    setSelectedProduct(foundedProduct);
+    if (foundedProduct) {
+      setSelectedProduct(foundedProduct);
+    }
   };
 
-  const addToping = (product, ingredient) => {
-    setSelectedProduct({
+  const addToping = (product: any, ingredient: Topping) => {
+    const changedOrder = ({
       ...product,
-      toppings: product.toppings.map((topping) => {
+      toppings: product.toppings.map((topping: Topping) => {
         if (topping.id === ingredient.id) {
           return ({
             ...topping,
@@ -35,12 +47,14 @@ const OrderList = ({ userOrder, ingredients, changeOrder }) => {
         return topping;
       }),
     });
+
+    setSelectedProduct(changedOrder);
   };
 
-  const removeTopping = (product, ingredient) => {
+  const removeTopping = (product: any, ingredient: Topping) => {
     setSelectedProduct({
       ...product,
-      toppings: product.toppings.map((topping) => {
+      toppings: product.toppings.map((topping: Topping) => {
         if (topping.id === ingredient.id && topping.quantity !== 0) {
           return ({
             ...topping,
@@ -73,7 +87,7 @@ const OrderList = ({ userOrder, ingredients, changeOrder }) => {
                 <p>
                   {`цена  ${product.toppings.reduce((acc, curVal) => (
                     acc + (curVal.price * curVal.quantity) * product.quantity
-                  ), 0)}`}
+                  ), 0)} грн`}
                 </p>
               </div>
               <div>
@@ -83,7 +97,7 @@ const OrderList = ({ userOrder, ingredients, changeOrder }) => {
               <button
                 type="button"
                 className="button is-rounded is-warning"
-                onClick={() => chooseProduct(product.id)}
+                onClick={() => chooseProduct(product)}
               >
                 Изменить
               </button>
@@ -98,8 +112,8 @@ const OrderList = ({ userOrder, ingredients, changeOrder }) => {
           chooseProduct={chooseProduct}
           addToping={addToping}
           removeTopping={removeTopping}
-          changeOrder={changeOrder}
-          ingredients={ingredients}
+          onOrderChange={onOrderChange}
+          onDelete={onDelete}
         />
       )}
       <div className="py-5">
