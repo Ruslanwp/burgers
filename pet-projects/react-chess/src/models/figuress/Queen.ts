@@ -1,0 +1,14 @@
+import { Cell } from "../Cell";
+import { Colors } from "../Colors";
+import { Figure, FigureName } from "./Figure";
+
+const whiteLogo = require('../../assets/white-queen.png');
+const blackLogo = require('../../assets/black-queen.png');
+
+export class Queen extends Figure { 
+  constructor(color: Colors, cell: Cell) {
+    super(color, cell);
+    this.logo = color === Colors.BLACK ? blackLogo : whiteLogo;
+    this.name = FigureName.QUEEN;
+  }
+}
