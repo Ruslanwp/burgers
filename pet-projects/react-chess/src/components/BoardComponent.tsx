@@ -1,5 +1,6 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Fragment } from "react";
+import { HighlightSpanKind } from "typescript";
 import { Board } from "../models/Board";
 import { Cell } from "../models/Cell";
 import { CellComponent } from "./CellComponent";
@@ -13,11 +14,26 @@ export const BoardComponent: FC<BoardProps> = ({board, setBoard}) => {
   const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 
   const click = (cell: Cell) => {
-    console.log(cell.figure);
-    
-    if (cell.figure) {
+    if (selectedCell && selectedCell !== cell && selectedCell.figure?.canMove(cell)) {
+      selectedCell.moveFigure(cell);
+      setSelectedCell(null);
+    } else {
       setSelectedCell(cell);
     }
+  }
+
+  useEffect(() => {
+    highlightCells()
+  }, [selectedCell]);
+
+  const highlightCells = () => {
+    board.highlightCells(selectedCell);
+    updateBoard();
+  }
+
+  const updateBoard = () => {
+    const newBoard = board.getCopyBoard();
+    setBoard(newBoard);
   }
 
   return (
