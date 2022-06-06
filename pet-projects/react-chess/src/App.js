@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BoardComponent } from './components/BoardComponent';
+import { LostFigures } from './components/LostFigures';
+import { Timer } from './components/Timer';
 import { Board } from './models/Board';
+import { Colors } from './models/Colors';
+import { Player } from './models/Player';
 
 function App() {
   const [board, setBoard] = useState(new Board());
+  const [whitePlayer, setWhitePlayer] = useState(new Player(Colors.WHITE));
+  const [blackPlayer, setBlackPlayer] = useState(new Player(Colors.BLACK));
+  // eslint-disable-next-line no-self-compare
+  const [currentPlayer, setCurrentPlayer] = useState(null);
 
   useEffect(() => {
-    restart(); 
+    restart();
+    setCurrentPlayer(whitePlayer) 
   }, []);
 
   const restart = () => {
@@ -17,9 +26,32 @@ function App() {
     setBoard(newBoard); 
   }
 
+  const swapPlayer = () => {
+    setCurrentPlayer(currentPlayer?.color === Colors.WHITE ? blackPlayer : whitePlayer)
+  }
+
   return (
     <div className="App">
-      <BoardComponent board={board} setBoard={setBoard}/>
+      <Timer
+        restart={restart}
+        currentPlayer={currentPlayer}
+      /> 
+      <BoardComponent
+        board={board}
+        setBoard={setBoard}
+        currentPlayer={currentPlayer}
+        swapPlayer={swapPlayer}
+      />
+      <div>
+        <LostFigures
+          title={'Black Figures'}
+          figures={board.lostBlackFigures}
+        />
+        <LostFigures
+          title={'WHite Figures'}
+          figures={board.lostWhiteFigures}
+        />
+      </div>
     </div>
   );
 }
